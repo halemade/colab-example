@@ -7,9 +7,9 @@ df = pd.read_csv('https://raw.githubusercontent.com/plotly/datasets/master/gapmi
 app = Dash(__name__)
 
 app.layout = html.Div([
-    html.H1(children='Title of CELIAs Dash App', style={'textAlign':'center'}),
+    html.H1(children='Population over Time', style={'textAlign':'center'}),
     dcc.Dropdown(df.country.unique(), 'Canada', id='dropdown-selection'),
-    dcc.Graph(id='graph-content')
+    dcc.Graph(id='graph-content'),
 ])
 
 @callback(
